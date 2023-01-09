@@ -12,13 +12,17 @@ export class Satellite {
 		this.launchDate = launchDate;
 		this.orbitType = orbitType;
 		this.operational = operational;
-   }
-	
+	}
+
 	isSpaceDebris(): boolean {
-		return true;
-   }
-// this method should return true IF you call it on a satellite object that has a type of 'space debris' 
-// ex) somesatteliteObj.isSpaceDebris() would return if somesatellite.type === 'space debris'
+		if (this.type === "Space Debris") {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	// this method should return true IF you call it on a satellite object that has a type of 'space debris' 
+	// ex) somesatteliteObj.isSpaceDebris() would return if somesatellite.type === 'space debris'
 }
 
 // TODO 3a: fix isSpaceDebris check
